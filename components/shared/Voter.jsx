@@ -46,7 +46,7 @@ const Voter = ({ workflowStatus }) => {
     const getProposals = async () => {
         try {
             const blockNumber = await publicClient.getBlockNumber()
-            const fromBlock = blockNumber > 1000n ? blockNumber - 1000n : 0n
+            const fromBlock = blockNumber > 100n ? blockNumber - 100n : 0n
             const logs = await publicClient.getLogs({
                 address: contractAddress,
                 event: parseAbiItem('event ProposalRegistered(uint256 proposalId)'),

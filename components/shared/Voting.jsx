@@ -31,7 +31,8 @@ const Voting = () => {
         }
     })
 
-    const isOwner = isConnected && address?.toLowerCase() === owner?.toLowerCase()
+    //const isOwner = isConnected && address?.toLowerCase() === owner?.toLowerCase()
+    const isOwner = isConnected && owner !== undefined && address?.toLowerCase() === owner?.toLowerCase()
 
     console.log("address:", address)
     console.log("owner:", owner)
