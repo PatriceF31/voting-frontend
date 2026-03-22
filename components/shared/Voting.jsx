@@ -31,7 +31,7 @@ const Voting = () => {
         }
     })
 
-    const isOwner = isConnected && address === owner
+    const isOwner = isConnected && address?.toLowerCase() === owner?.toLowerCase()
 
     return (
         <Layout>
